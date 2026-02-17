@@ -73,5 +73,9 @@ ${TEMPLATE}`
 	}, 30000); // 30 second grace period
 });
 
+client.once("clientReady", () => {
+	console.log(`Logged in as ${client.user.tag}`);
+});
+
 client.login(process.env.BOT_TOKEN);
 
